@@ -59,7 +59,7 @@ class PostController extends Controller
             'body' => $request->body,
         ]);
 
-        return redirect('/posts')->with('toast_success', 'Post was created!');
+        return Redirect::route('posts.index')->withSuccessMessage('Post Succefully added');;
     }
 
     /**
